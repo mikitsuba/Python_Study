@@ -9,3 +9,17 @@ def print_board(board):
     print('-+-+-')
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
     print('-+-+-')
+
+
+turn = 'X'
+
+for i in range(9):
+    print_board(the_board)
+    print(turn + 'の番です。どこに打つ？')
+    move = input()
+    the_board[move] = turn
+
+    if turn == 'X':
+        turn = 'O'
+    else:
+        turn = 'X'
