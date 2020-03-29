@@ -55,7 +55,7 @@ capital_cities = {"北海道": "札幌市",
 
 
 # 35この問題集を作成する
-for quiz_num in range(35)):
+for quiz_num in range(35):
     # TODO 問題集と解答集のファイルを作成する
     quiz_file = open('capitalsquiz{}.txt'.format(quiz_num + 1), 'w')
     answer_key_file = open('capitalquiz_answers{}.txt'.format(quiz_num + 1), 'w')
@@ -74,9 +74,9 @@ for quiz_num in range(35)):
 
         correct_answer = capital_cities[prefectures[question_num]]
         wrong_answers = list(capital_cities.values())
-        del wrong_answers[wrong_answers.index(correct_answer)]
+        wrong_answers.remove(correct_answer)
         wrong_answers = random.sample(wrong_answers, 3)
-        answer_options = wrong_answers+ [correct_answer] 
+        answer_options = wrong_answers + [correct_answer] # appendは元のリストの内容変更するものであるため、ここでは使わない（wrong_answersの内容が変わることになる）
         random.shuffle(answer_options)
 
         quiz_file.write('{}. {}の都道府県庁所在地は?\n'.format(question_num + 1, prefectures[question_num]))
