@@ -55,7 +55,7 @@ capital_cities = {"北海道": "札幌市",
 
 
 # 35この問題集を作成する
-for quiz_num in range(10):
+for quiz_num in range(35)):
     # TODO 問題集と解答集のファイルを作成する
     quiz_file = open('capitalsquiz{}.txt'.format(quiz_num + 1), 'w')
     answer_key_file = open('capitalquiz_answers{}.txt'.format(quiz_num + 1), 'w')
