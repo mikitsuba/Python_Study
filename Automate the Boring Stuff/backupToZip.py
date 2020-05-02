@@ -7,7 +7,7 @@ import shutil
 import datetime
 
 # バックアップ対象のフォルダ
-folder = '/Users/mikitsuba/Programming/__study/' 
+folder = input('バックアップ対象のフォルダを/Users/から記載')
 
 # バックアップ後のファイルの名称
 folder = os.path.abspath(folder) # folderを絶対パスにする
@@ -39,7 +39,7 @@ def backup_to_zip():
 backup_to_zip()
 
 # バックアップファイルの保存先
-storage = '/Users/mikitsuba/Programming/__study/Python/Automate_the_Boring_Stuff/back_up'
+storage = input('バックアップファイルの保存先を、/Users/から記載')
 
 # バックアップファイルをバックアップフォルダに移動
 shutil.move(zip_filename, storage)
