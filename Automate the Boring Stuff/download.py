@@ -1,3 +1,6 @@
+#! /usr/bin/env python3
+# download.py - https://xkcd.com/ に保存されているコミックの画像ファイルを、カレントディレクトリの「xkcd」フォルダに保存する
+
 import os
 import requests
 import bs4
