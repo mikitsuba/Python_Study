@@ -5,6 +5,7 @@ import os
 import requests
 import bs4
 import logging
+import time
 
 logging.basicConfig(level=logging.DEBUG, format='%(levelname)s : %(asctime)s : %(message)s')
 
@@ -50,6 +51,9 @@ while not start_url.endswith('#'):
     prev_link = soup.select('a[rel="prev"]')[0]
     prev_url = 'https://xkcd.com/' + prev_link.get('href')
     start_url = prev_url
+
+    # サーバーに負荷をかけないために、ループごとに一定時間をあける
+    time.sleep(3)
 
 print('Done.')
 
